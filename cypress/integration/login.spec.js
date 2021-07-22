@@ -30,12 +30,15 @@ context('Login', () => {
         //cy.get('a > .hidden-xs').should('contain', 'Welcome Eshi Cruz !')
 
         //PAGEOBJECTS
-        LoginPage.login(data.usuario, data.senha)
-        MinhaContaPage.getUsuarioLogado().should('contain', 'Welcome Eshi Cruz !')
-        
+        //LoginPage.login(data.usuario, data.senha)
+        //MinhaContaPage.getUsuarioLogado().should('contain', 'Welcome Eshi Cruz !')
+
+        //COMMANDS
+        cy.login(data.usuario, data.senha)
+        cy.mensagemBoasVindas().should('contain', 'Welcome Eshi Cruz !')
     });
 });
 
 afterEach(() =>{
-    //cy.screenshot()
+    cy.screenshot()
 })
