@@ -15,7 +15,7 @@ context('Validar menus', () => {
         cy.url().should('contain', '/shop')
     });
 
-    it('Clicando no linkde de conta deve direcionar para a página de login/cadastro', () => {
+    it('Clicando no link de conta deve direcionar para a página de login/cadastro', () => {
         //cy.visit("http://lojaebac.ebaconline.art.br/")
         cy.get('.icon-user-unfollow').click()
         cy.url().should('contain', '/my-account-2')
